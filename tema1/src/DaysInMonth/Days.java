@@ -6,12 +6,14 @@ import java.util.Scanner;
 public class Days {
 
 
-        public static void main(String[] strings) {
-
+    public static void main(String[] strings) {
+        boolean run = true;
+        while (run) {
             Scanner input = new Scanner(System.in);
 
             int numDaysInMonth = 0;
             String MonthName = "Unknown";
+
 
             System.out.print("Input a month number: ");
             int month = input.nextInt();
@@ -19,6 +21,7 @@ public class Days {
 
             System.out.print("Input a year: ");
             int year = input.nextInt();
+
 
             switch (month) {
                 case 1:
@@ -75,7 +78,8 @@ public class Days {
                 default:
                     System.out.println("The Month doesn't exist!Months are only 1-12");
             }
-            System.out.print(MonthName + " " + year + " has " + numDaysInMonth + " days\n");
+            System.out.print("Month: " + MonthName +"," + " Year: " + year + " has " + numDaysInMonth + " days\n");
         }
     }
+}
 
